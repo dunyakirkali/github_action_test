@@ -1,0 +1,15 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - master
+  pull_request: null
+
+jobs:
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format
+        run: echo "Continuous Integration"

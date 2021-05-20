@@ -1,0 +1,16 @@
+name: Preview
+
+on:
+  workflow_run:
+    workflows:
+      - "Continuous Integration"
+    types:
+      - completed
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        run: echo "Dunya"
