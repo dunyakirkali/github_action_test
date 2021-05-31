@@ -16,7 +16,15 @@ jobs:
     name: Format
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Format
         run: echo "Continuous Integration"
       - name: Branch
         run: echo ${{github.ref}}
+      - name: Head
+        run: echo ${{github.head_ref}}
+      - name: Base
+        run: echo ${{github.base_ref}}
