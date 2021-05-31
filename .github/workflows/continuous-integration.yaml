@@ -24,3 +24,7 @@ jobs:
         run: echo "Continuous Integration"
       - name: Branch
         run: echo ${{github.ref}}
+      - name: Head
+        run: echo ${{github.head_ref}}
+      - name: Base
+        run: echo ${{github.base_ref}}
